@@ -3,24 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Alma y Espacio Arquitectura</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f2ed;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #111111;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .marca h1 {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        .marca p {
+            color: #bdbdbd;
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c9a96e;
+        }
+
+        .portada {
+            min-height: 75vh;
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)
+            );
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+        }
+
+        .portada-contenido {
+            max-width: 750px;
+        }
+
+        .portada h2 {
+            font-size: clamp(42px, 7vw, 85px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .portada p {
+            max-width: 600px;
+            font-size: 19px;
+            color: #dddddd;
+            margin-bottom: 35px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #c9a96e;
+            color: #111111;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: white;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        section h2 {
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+
+        .presentacion {
+            max-width: 800px;
+            font-size: 18px;
+        }
+
+        .servicios {
+            background-color: white;
+        }
+
+        .lista-servicios {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .servicio {
+            border-top: 3px solid #c9a96e;
+            background-color: #f4f2ed;
+            padding: 30px;
+        }
+
+        .servicio h3 {
+            margin-bottom: 12px;
+        }
+
+        .contacto {
+            background-color: #1b1b1b;
+            color: white;
+        }
+
+        .contacto p {
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            background-color: #0d0d0d;
+            color: #aaaaaa;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 18px 0 0;
+            }
+
+            .lista-servicios {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Alma y Espacio</h1>
 
-    <h2>Arquitectura con identidad</h2>
+    <header>
+        <div class="marca">
+            <h1>ALMA Y ESPACIO</h1>
+            <p>ARQUITECTURA</p>
+        </div>
 
-    <p>
-        Diseñamos espacios pensados para entregar refugio,
-        pertenencia y bienestar.
-    </p>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
 
-    <h2>Servicios</h2>
+    <main>
+        <section class="portada" id="inicio">
+            <div class="portada-contenido">
+                <h2>Arquitectura con identidad</h2>
 
-    <p>
-        Diseño de viviendas, regularizaciones,
-        modelado 3D y representación arquitectónica.
-    </p>
+                <p>
+                    Creamos espacios pensados para entregar refugio,
+                    pertenencia y bienestar.
+                </p>
+
+                <a class="boton" href="#servicios">
+                    Conoce nuestros servicios
+                </a>
+            </div>
+        </section>
+
+        <section id="nosotros">
+            <h2>Alma y Espacio</h2>
+
+            <p class="presentacion">
+                Entendemos la arquitectura como la unión entre las
+                necesidades de las personas, la identidad del lugar y
+                la construcción de espacios capaces de mejorar la vida
+                cotidiana.
+            </p>
+        </section>
+
+        <section class="servicios" id="servicios">
+            <h2>Servicios</h2>
+
+            <div class="lista-servicios">
+                <article class="servicio">
+                    <h3>Diseño arquitectónico</h3>
+                    <p>
+                        Diseño de viviendas y espacios adaptados a las
+                        necesidades de cada persona.
+                    </p>
+                </article>
+
+                <article class="servicio">
+                    <h3>Regularizaciones</h3>
+                    <p>
+                        Levantamiento, planimetría y preparación de
+                        antecedentes para trámites municipales.
+                    </p>
+                </article>
+
+                <article class="servicio">
+                    <h3>Visualización 3D</h3>
+                    <p>
+                        Modelado, imágenes y representación visual de
+                        proyectos arquitectónicos.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2>Conversemos sobre tu proyecto</h2>
+
+            <p>
+                Cuéntanos tu idea y te ayudaremos a convertirla en un
+                espacio con sentido.
+            </p>
+
+            <a class="boton" href="mailto:tu-correo@gmail.com">
+                Enviar correo
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Alma y Espacio Arquitectura
+    </footer>
+
 </body>
 </html>
