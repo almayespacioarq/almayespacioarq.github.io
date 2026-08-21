@@ -145,6 +145,26 @@
         .servicio h3 {
             margin-bottom: 12px;
         }
+        .enlace-servicio {
+    color: inherit;
+    text-decoration: none;
+}
+
+.enlace-servicio .servicio {
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.enlace-servicio:hover .servicio {
+    transform: translateY(-5px);
+}
+
+.ver-mas {
+    display: inline-block;
+    margin-top: 20px;
+    color: #8c6a2f;
+    font-weight: bold;
+}
 
         .contacto {
             background-color: #1b1b1b;
@@ -255,13 +275,25 @@
             <h2>Servicios</h2>
 
             <div class="lista-servicios">
-                <article class="servicio">
-                    <h3>Diseño arquitectónico</h3>
-                    <p>
-                        Diseño de viviendas y espacios adaptados a las
-                        necesidades de cada persona.
-                    </p>
-                </article>
+                <a
+    class="enlace-servicio"
+    href="diseno-arquitectonico.html"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <article class="servicio">
+        <h3>Diseño arquitectónico</h3>
+
+        <p>
+            Diseños de viviendas disponibles y propuestas
+            adaptadas a las necesidades de cada persona.
+        </p>
+
+        <span class="ver-mas">
+            Ver diseños →
+        </span>
+    </article>
+</a>
 
                 <article class="servicio">
                     <h3>Regularizaciones</h3>
